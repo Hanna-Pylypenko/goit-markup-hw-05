@@ -281,6 +281,10 @@ a:active {
   padding-right: 32px;
 }
 .team-contacts li {
+  box-shadow: none;
+  border: none;
+}
+.team-contacts a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -290,8 +294,8 @@ a:active {
   box-shadow: none;
   fill: #afb1b8;
 }
-.team-contacts li:hover,
-.team-contacts-icon:focus {
+.team-contacts a:hover,
+.team-contacts a:focus {
   fill: var(--body-background);
   background-color: var(--hover-color);
 }
@@ -406,26 +410,27 @@ footer li {
   display: flex;
 }
 .join-methods li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  fill: var(--body-background);
-  width: 44px;
-  height: 44px;
+  border: none;
+  box-shadow: none;
   border-radius: 50%;
+
   margin-right: 10px;
 }
 .join-methods li a {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgba(255, 255, 255, 0.1);
   fill: var(--body-background);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
 }
 .join-methods li:last-child {
   margin-right: 0;
 }
-.join-methods li:hover {
+.join-methods a:hover,
+.join-methods a:focus {
   background: var(--hover-color);
 }
 .footer-contacts > li:not(:last-child) {
