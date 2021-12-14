@@ -609,14 +609,15 @@ footer li {
 }
 .thumb-description {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 63px;
+  left: 24px;
+
   display: flex;
   justify-content: center;
   align-content: center;
   opacity: 0;
 }
+
 .description-words {
   font: inherit;
   font-size: 18px;
