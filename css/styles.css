@@ -72,12 +72,18 @@ button:focus {
 header {
   display: flex;
   flex-direction: space-between;
-  padding-top: 25px;
-  padding-bottom: 25px;
+
   border-bottom: 1px solid #ececec;
 }
 header ul {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .nav-anchors a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header-contacts .item {
   fill: var(--text-color);
@@ -99,6 +105,10 @@ header ul {
 }
 .nav-anchors {
   display: flex;
+}
+.nav-anchors a {
+  display: block;
+  min-height: 76px;
 }
 .nav-anchors li:not(:last-child) {
   margin-right: 50px;
@@ -681,8 +691,21 @@ section {
 .nav li a:focus,
 .nav li a:active,
 header .current {
+  position: relative;
+
+  height: 100%;
   color: var(--hover-color);
   transition-property: background-colour, color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.current::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--hover-color);
+  border-radius: 2px;
 }
