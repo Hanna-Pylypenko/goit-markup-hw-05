@@ -3,6 +3,12 @@
 *::after {
   box-sizing: border-box;
 }
+*:hover,
+*:focus {
+  transition-property: background-colour, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 p,
 h1,
 h2,
@@ -55,6 +61,9 @@ button:focus {
   color: var(--body-background);
   background-color: var(--hover-color);
   cursor: pointer;
+  transition-property: background-colour, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .join li,
 .team-contacts-icon:hover {
@@ -109,12 +118,18 @@ header ul {
 .contacts:hover,
 .footer-contacts:hover {
   color: var(--hover-color);
+  transition-property: background-colour, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 a:hover,
 a:focus,
 a:active {
   color: var(--hover-color);
   cursor: pointer;
+  transition-property: background-colour, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo {
   font-family: Raleway;
@@ -298,6 +313,9 @@ a:active {
 .team-contacts a:focus {
   fill: var(--body-background);
   background-color: var(--hover-color);
+  transition-property: background-colour, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-contacts-icon:not(:last-child) {
   margin-right: 10px;
@@ -342,6 +360,9 @@ a:active {
 .clients-icons li a:focus {
   fill: var(--hover-color);
   border-color: var(--hover-color);
+  transition-property: background-colour, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .loyal-clients .client-icon {
   width: 170px;
@@ -432,6 +453,9 @@ footer li {
 .join-methods a:hover,
 .join-methods a:focus {
   background: var(--hover-color);
+  transition-property: background-colour, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-contacts > li:not(:last-child) {
   margin-bottom: 9px;
@@ -459,7 +483,7 @@ footer li {
 .portfolio-card a {
   text-decoration: none;
 }
-.portfolio-card p {
+.portfolio-card .item p {
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
@@ -467,9 +491,13 @@ footer li {
   line-height: 1.87;
   letter-spacing: 0.03em;
 }
-.portfolio-card:hover {
+.portfolio-card:hover,
+.portfolio-card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition-property: background-colour, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-card:nth-child(3n) {
   margin-right: 0;
@@ -500,6 +528,51 @@ footer li {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.9;
+}
+.portfolio-thumb {
+  position: relative;
+}
+.portfolio-thumb::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--hover-color);
+  opacity: 0;
+}
+
+.portfolio-card:hover .portfolio-thumb::before {
+  opacity: 0.9;
+  transition-property: background-colour, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-card:hover .thumb-description {
+  opacity: 0.9;
+  transition-property: background-colour, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.thumb-description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  opacity: 0;
+}
+.description-words {
+  font: inherit;
+  font-size: 18px;
+  line-height: 1.55;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--body-background);
+  width: 322px;
 }
 address {
   width: 231px;
@@ -536,6 +609,9 @@ address {
 .filter-item:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition-property: background-colour, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-studio {
   color: var(--headline-color);
@@ -564,4 +640,7 @@ section {
 .nav li a:active,
 header .current {
   color: var(--hover-color);
+  transition-property: background-colour, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
