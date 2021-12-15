@@ -5,7 +5,7 @@
 }
 *:hover,
 *:focus {
-  transition-property: background-colour, color, box-shadow;
+  transition-property: background-color, color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -249,6 +249,9 @@ a:active {
   justify-self: center;
   align-items: center;
   background-color: var(--body-background);
+}
+.close:hover .icon-close {
+  fill: var(--body-background);
 }
 .icon-close {
   fill: black;
